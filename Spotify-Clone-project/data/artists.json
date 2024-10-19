@@ -1,0 +1,122 @@
+[
+    {
+        "name": "Pritam",
+        "image": "images/artists/ab67616100005174cb6926f44f620555ba444fca.jpeg",
+        "description": "Artist",
+        "song": "songs/Tujhe Sochta Hoon - Pritam.mp3"
+    },
+    {
+        "name": "A.R. Rahman",
+        "image": "images/artists/ab67616100005174b19af0ea736c6228d6eb539c.jpeg",
+        "description": "Artist",
+        "song": "songs/Tere Bina - A.R. Rahman.mp3"
+    },
+    {
+        "name": "Sachin-Jigar",
+        "image": "images/artists/ab67616100005174bd6fbc7d0973cc33940781ad.jpeg",
+        "description": "Artist",
+        "song": "songs/Aaj Ki Raat (From _Stree 2_) - Sachin-Jigar.mp3"
+    },
+    {
+        "name": "Arijit Singh",
+        "image": "images/artists/ab676161000051745ba2d75eb08a2d672f9b69b7.jpeg",
+        "description": "Artist",
+        "song": "songs/Apna Bana Le - Sachin-Jigar.mp3"
+    },
+    {
+        "name": "Anirudh Ravichander",
+        "image": "images/artists/ab676161000051740f0be2054fe9594026a6b843.jpeg",
+        "description": "Artist",
+        "song": "songs/Chuttamalle (From _Devara Part 1_) - Shilpa Rao.mp3"
+    },
+    {
+        "name": "Atif Aslam",
+        "image": "images/artists/ab67616100005174c40600e02356cc86f0debe84.jpeg",
+        "description": "Artist",
+        "song": "songs/O Meri Laila - Atif Aslam.mp3"
+    },
+    {
+        "name": "Vishal Mishra",
+        "image": "images/artists/ab67616100005174fb13d10be20fdcb5a670f551.jpeg",
+        "description": "Artist",
+        "song": "songs/Mere Sohneya (From _Kabir Singh_) - Sachet Tandon.mp3"
+    },
+    {
+        "name": "Vishal-Shekhar",
+        "image": "images/artists/ab6761610000517490b6c3d093f9b02aad628eaf.jpeg",
+        "description": "Artist",
+        "song": "songs/Main Agar Kahoon - Sonu Nigam.mp3"
+    },
+    {
+        "name": "Diljit Dosanjh",
+        "image": "images/artists/ab67616100005174fc043bea91ac91c222d235c9.jpeg",
+        "description": "Artist",
+        "song": "songs/G.O.A.T..mp3"
+    },
+    {
+        "name": "Udit Narayan",
+        "image": "images/artists/ab676161000051748de0e6e7e55d7773931ab7f4.jpeg",
+        "description": "Artist",
+        "song": "songs/Tere Naam.mp3"
+    },
+    {
+        "name": "Darshan Raval",
+        "image": "images/artists/ab67616100005174fd5ddfdc83ae91d0515bacf6.jpeg",
+        "description": "Artist",
+        "song": "songs/G.O.A.T..mp3"
+    },
+    {
+        "name": "Yo Yo Honey Singh",
+        "image": "images/artists/ab67616100005174bc7e4fffd515b47ff1ebbc1f.jpeg",
+        "description": "Artist",
+        "song": "songs/Desi Kalakaar - Yo Yo Honey Singh.mp3"
+    },
+    {
+        "name": "Karan Aujla",
+        "image": "images/artists/ab676161000051743fabb44dc3b3dcfc1a366298.jpeg",
+        "description": "Artist",
+        "song": "songs/Tauba Tauba (From _Bad Newz_) - Karan Aujla.mp3"
+    },
+    {
+        "name": "Badshah",
+        "image": "images/artists/ab67616100005174eddbb664c4723f268a60d8c1.jpeg",
+        "description": "Artist",
+        "song": "songs/God Damn - Badshah.mp3"
+    },
+    {
+        "name": "KK",
+        "image": "images/artists/ab67616100005174b09a31f853166e721d4d46b2.jpeg",
+        "description": "Artist",
+        "song": "songs/Teri Yaadon Mein - KK.mp3"
+    },
+    {
+        "name": "Sachet Tondon",
+        "image": "images/artists/ab67616100005174e34fad78221a2cb31da57946.jpeg",
+        "description": "Artist",
+        "song": "songs/Mere Sohneya (From _Kabir Singh_) - Sachet Tandon.mp3"
+    },
+    {
+        "name": "Shreya Ghoshal",
+        "image": "images/artists/ab6761610000517459303d54ce789210e745e1a9.jpeg",
+        "description": "Artist",
+        "song": "songs/Agar Tum Mil Jao - From _Zeher_ - Shreya Ghoshal.mp3"
+    },
+    {
+        "name": "Sonu Nigam",
+        "image": "images/artists/ab67616100005174bc959d7569618ec2af2210f5.jpeg",
+        "description": "Artist",
+        "song": "songs/Main Agar Kahoon - Sonu Nigam.mp3"
+    },
+    {
+        "name": "Shankar Madhavan",
+        "image": "images/artists/ab676161000051743f27a828c24d73cf0427e2e7.jpeg",
+        "description": "Artist",
+        "song": "songs/Dekha Ek Khwab - Lata Mangeshkar.mp3"
+    },
+    {
+        "name": "Jasleen Royal",
+        "image": "images/artists/ab67616100005174654603f76991dc1275e67d39.jpeg",
+        "description": "Artist",
+        "song": "songs/Agar Tum Mil Jao - From _Zeher_ - Shreya Ghoshal.mp3"
+    }
+]

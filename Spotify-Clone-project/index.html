@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for Everyone</title>
+    <link rel="icon" href="images/icons/spotify.ico">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/content.css">
+    <link rel="stylesheet" href="static/library.css">
+    <link rel="stylesheet" href="static/music.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <a id="logo" href="https://open.spotify.com/"></a>
+        <div id="header-mid">
+            <button class="hover-pickup" id="home"></button>
+            <input type="text" class="hover-pickup text-input" id="search-bar" placeholder="What do you want to play?">
+            <button class="hover-pickup" id="browse"></button>
+        </div>
+        <div id="nav-menu-icon">
+            <ul id="nav-menu-container">
+                <li>
+                    <button class="hover-pickup openInNewTab" id="signup"
+                        href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign
+                        up</button>
+                </li>
+                <li>
+                    <button class="hover-pickup openInNewTab" id="login"
+                        href="https://accounts.spotify.com/en-GB/login?continue=https%3A%2F%2Fopen.spotify.com%2F">Log
+                        in</button>
+                </li>
+                <li>
+                    <button onclick="load_home()">Home</button>
+                </li>
+                <li>
+                    <button onclick="load_library()">Library</button>
+                </li>
+                <li>
+                    <button onclick="load_home()">Browse</button>
+                </li>
+                <li>
+                    <button onclick="load_music_player()">Play Music</button>
+                </li>
+            </ul>
+        </div>
+        <div id="login-signup">
+            <button class="hover-pickup openInNewTab" id="signup"
+                href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign
+                up</button>
+            <button class="hover-pickup openInNewTab" id="login"
+                href="https://accounts.spotify.com/en-GB/login?continue=https%3A%2F%2Fopen.spotify.com%2F">Log
+                in</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="library">
+            <div id="library-header">
+                <h4>Your Library</h4>
+                <button id="create-playlist"></button>
+            </div>
+
+            <div id="playlists-container"></div>
+
+            <footer>
+                <ul id="library-footer-list">
+                    <li><a href="https://www.spotify.com/in-en/legal/">Legal</a></li>
+                    <li><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a></li>
+                    <li><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></li>
+                    <li><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></li>
+                    <li><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></li>
+                    <li><a href="https://www.spotify.com/in-en/accessibility/">Accessibilty</a></li>
+                    <li><a href="https://www.spotify.com/legal/cookies-policy/" target="_blank">
+                            <b>Cookies</b>
+                        </a></li>
+                </ul>
+                <button id="lang-button" class="hover-pickup">English</button>
+            </footer>
+        </div>
+
+        <div id="spotify-content-container">
+            <div id="spotify-content"></div>
+
+            <footer id="content-footer">
+                <div id="footer-main-container">
+                    <ul id="footer-company-list">
+                        <h4>Company</h4>
+                        <li><a href="https://www.spotify.com/in-en/about-us/contact/">About</a></li>
+                        <li><a href="https://www.lifeatspotify.com/">Jobs</a></li>
+                        <li><a href="https://newsroom.spotify.com/">For the Record</a></li>
+                    </ul>
+                    <ul id="footer-commuities-list">
+                        <h4>Communities</h4>
+                        <li><a href="https://artists.spotify.com/home">For Artists</a></li>
+                        <li><a href="https://developer.spotify.com/">Developers</a></li>
+                        <li><a href="https://ads.spotify.com/en-IN/">Advertising</a></li>
+                        <li><a href="https://investors.spotify.com/home/default.aspx">Investors</a></li>
+                        <li><a href="https://spotifyforvendors.com/">Venders</a></li>
+                    </ul>
+                    <ul id="footer-usefulLinks-list">
+                        <h4>Useful Links</h4>
+                        <li><a href="https://support.spotify.com/in-en/">Support</a></li>
+                        <li><a href="https://www.spotify.com/in-en/free/">Free Mobile App</a></li>
+                    </ul>
+                    <ul id="footer-spotifyPlans-list">
+                        <h4>Spotify Plans</h4>
+                        <li><a href="https://www.spotify.com/in-en/premium/?ref=spotifycom_footer_premium_individual">Premium
+                                Individual</a></li>
+                        <li><a href="https://www.spotify.com/in-en/duo/?ref=spotifycom_footer_premium_duo">Premium
+                                Duo</a></li>
+                        <li><a href="https://www.spotify.com/in-en/family/?ref=spotifycom_footer_premium_family">Premium
+                                Family</a></li>
+                        <li><a href="https://www.spotify.com/in-en/student/?ref=spotifycom_footer_premium_student">Premium
+                                Student</a></li>
+                        <li><a href="https://www.spotify.com/in-en/free/?ref=spotifycom_footer_free">Spotify Free</a>
+                        </li>
+                    </ul>
+                    <div id="footer-socialMedia">
+                        <button id="instagram" class="openInNewTab" href="https://www.instagram.com/spotify"></button>
+                        <button id="twitter" class="openInNewTab" href="https://x.com/spotify"></button>
+                        <button id="facebook" class="openInNewTab"
+                            href="https://www.facebook.com/SpotifyIndia/"></button>
+                    </div>
+                </div>
+                <hr>
+                <p>© 2024 Spotify AB</p>
+            </footer>
+        </div>
+    </main>
+</body>
+<script src="static/script.js"></script>
+
+</html>

@@ -1,0 +1,526 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Proxima Nova', 'Arial', sans-serif;
+    overflow: hidden;
+    height: 99vh;
+    position: relative;
+}
+
+body a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 3rem;
+    /* margin: 0 0 0 1rem; */
+}
+
+#logo {
+    width: 3rem;
+    height: 100%;
+    background: white url('svgs/spotify_BW.svg');
+    background-size: cover;
+    border-radius: 100%;
+}
+
+#header-mid {
+    display: flex;
+    gap: 10px;
+}
+
+header input, header button {
+    height: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    color: white;
+    border-radius: 3rem;
+}
+
+#header-mid > * {
+    width: 3rem;
+    background-color: rgb(31, 31, 31);
+    font-size: 1.5rem;
+}
+
+#home::before {
+    font-family: FontAwesome;
+    content: '\f015';
+}
+
+#browse::before {
+    font-family: FontAwesome;
+    content: '\f291';
+}
+
+#search-bar {
+    width: 25rem;
+    font-size: 1rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+#search-bar:hover {
+    background-color: rgb(41, 41, 41);
+    box-shadow: inset 0 0 1px white;
+}
+
+#login-signup button {
+    padding: 5px 30px;
+}
+
+#signup {
+    background: none;
+}
+
+#login {
+    color: black;
+}
+
+.hover-pickup:hover {
+    transform: scale(103%);
+    transition: transform 0.1s ease-in-out;
+}
+
+#nav-menu-icon, #nav-menu-container {
+    display: none;
+}
+
+#nav-menu-icon::before {
+    font-family: FontAwesome;
+    content: "\f0c9";
+    font-size: 2rem;
+}
+
+#nav-menu-icon {
+    position: relative;
+}
+
+#nav-menu-container  {
+    list-style-type: none;
+    padding: 0 0.5rem;
+    width: 15rem;
+    position: absolute;
+    z-index: 1;
+    top: 1.5rem;
+    right: 0;
+    background-color: rgb(41, 41, 41);
+}
+
+#nav-menu-container li + li {
+    border-top: 1px solid rgb(21, 21, 21);
+}
+
+#nav-menu-container button {
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+#nav-menu-container button:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+#nav-menu-icon.show-menu #nav-menu-container {
+    display: block;
+}
+
+main {
+    height: 90vh;
+    display: flex;
+    margin: 0.75rem 0;
+    gap: 0.5rem;
+}
+
+#library {
+    width: 28%;
+    background-color: rgb(21, 21, 21);
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+
+#library-header {
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 0px 0.5rem;
+}
+
+#library-header h4 {
+    margin: 0;
+    padding: 0.4rem;
+    opacity: 0.6;
+    font-size: 1.2rem;
+}
+
+#library-header h4::before {
+    font-family: FontAwesome;
+    content: '\f02e';
+    padding: 0.8rem;
+}
+
+#library-header h4:hover {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#create-playlist {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(21, 21, 21);
+    border: none;
+    border-radius: 100%;
+    color: white;
+    position: absolute;
+    right: 0.8rem;
+}
+
+#create-playlist:hover {
+    background-color: rgb(41, 41, 41);
+}
+
+#create-playlist::before {
+    font-family: FontAwesome;
+    content: '\2b';
+}
+
+#library footer {
+    padding: 0 1.5rem;
+}
+
+#library-footer-list {
+    list-style: none;
+    padding: 0;
+}
+
+#library-footer-list li {
+    display: inline-block;
+    margin: 0.5rem 1rem 0.5rem 0;
+    font-size: 0.7rem;
+}
+
+#lang-button {
+    background-color: rgb(21, 21, 21);
+    color: white;
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+#lang-button:hover {
+    border: 1px solid white;
+}
+
+#lang-button::before {
+    font-family: FontAwesome;
+    content: '\f0ac';
+    margin-right: 0.4rem;
+}
+
+#content-footer {
+    padding: 1.5rem;
+}
+
+#footer-main-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer-main-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer-main-container ul>* {
+    margin: 0.75rem 0;
+}
+
+#footer-main-container li {
+    color: rgb(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+#footer-main-container ul a:hover {
+    text-decoration: underline;
+}
+
+#footer-socialMedia {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+#footer-socialMedia button {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgb(41, 41, 41);
+    border: none;
+    border-radius: 100%;
+}
+
+#footer-socialMedia button:hover {
+    background-color: rgb(81, 81, 81);
+}
+
+#footer-socialMedia button::before {
+    font-family: FontAwesome;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#footer-socialMedia #instagram::before {
+    content: '\f16d';
+}
+
+#footer-socialMedia #twitter::before {
+    content: '\f099';
+}
+
+#footer-socialMedia #facebook::before {
+    content: '\f09a';
+}
+
+#content-footer hr {
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+#content-footer p {
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255, 0.7);
+    margin: 2rem 0;
+}
+
+.context-menu {
+    width: 12rem;
+    position: fixed;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    list-style: none;
+    border-radius: 5px;
+}
+
+.context-menu .menu-button {
+    padding: 0.5rem;
+}
+
+.context-menu #add::before {
+    font-family: FontAwesome;
+    content: '\f055';
+    margin-right: 0.5rem;
+}
+
+.context-menu .menu-button:hover {
+    background-color: rgb(71, 71, 71);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* Mobile Devices (Upto 480px) */
+@media screen and (max-width: 480px) {
+    header {
+        height: 2.5rem;
+    }
+
+    #header-mid button {
+        display: none;
+    }
+
+    #search-bar {
+        width: 15rem;
+        padding: 0 1rem;
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    #logo {
+        width: 2.5rem;
+    }
+
+    #login-signup {
+        display: none;
+    }
+
+    #nav-menu-icon {
+        display: flex;
+        align-items: center;
+        width: 2.5rem;
+    }
+
+    main {
+        /* display: none; */
+        height: 92vh;
+    }
+
+    #library {
+        width: 100%;
+        display: none;
+    }
+
+    #content-footer {
+        padding: 1rem;
+    }
+
+    #footer-main-container {
+        flex-direction: column;
+    }
+
+    #footer-main-container ul {
+        margin: 0 0 0.5rem 0;
+    }
+
+    #footer-main-container ul h4 {
+        margin: 0.5rem 0;
+    }
+
+    #footer-main-container ul li {
+        display: inline;
+        margin-right: 1.5rem;
+    }
+}
+
+/* Small Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    header {
+        height: 3.2rem;
+    }
+
+    #header-mid button {
+        display: none;
+    }
+
+    #search-bar {
+        width: 66vw;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        font-weight: normal;
+    }
+
+    #logo {
+        width: 3.2rem;
+    }
+
+    #login-signup {
+        display: none;
+    }
+
+    #nav-menu-icon {
+        display: flex;
+        align-items: center;
+        width: 3rem;
+    }
+
+    main {
+        /* display: none; */
+        height: 92vh;
+    }
+
+    #library {
+        width: 100%;
+        display: none;
+    }
+
+    #library-header h4 {
+        font-size: 1.4rem;
+    }
+
+    #create-playlist {
+        font-size: 2rem;
+    }
+
+    #library-footer-list li {
+        font-size: 0.8rem;
+    }
+
+    #content-footer {
+        padding: 1rem;
+    }
+
+    #footer-main-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #footer-main-container ul {
+        margin: 0 0 0.5rem 0;
+    }
+
+    #footer-main-container ul h4 {
+        margin: 0.5rem 0;
+    }
+
+    #footer-main-container ul li {
+        /* display: inline; */
+        margin-right: 1.5rem;
+    }
+}
+
+/* Large Tablets (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #search-bar {
+        width: 40vw;
+    }
+
+    #library {
+        width: 45%;
+    }
+
+    #spotify-content-container {
+        width: 55%;
+    }
+
+    #footer-main-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Laptops/Desktops (1025px to 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    #library {
+        width: 40%;
+    }
+
+    #spotify-content-container {
+        width: 60%;
+    }
+}
+
+/* Large Desktops (1441px and above) */
+@media screen and (min-width: 1441px) {
+    header {
+        height: 3.5rem;
+    }
+
+    #logo {
+        width: 3.5rem;
+    }
+
+    #header-mid > * {
+        font-size: 1.5rem;
+    }
+
+    header button {
+        font-size: 1.5rem;
+    }
+
+    #header-mid button {
+        width: 3.5rem;
+    }
+
+    #search-bar {
+        width: 40rem;
+    }
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "name": "GLORY",
+        "image": "images/albums/ab67616d00001e02aad3f4b601ae8763b3fc4e88.jpeg",
+        "description": ["Yo Yo Honey Singh"],
+        "song": "songs/Millionaire - Yo Yo Honey Singh.mp3"
+    },
+    {
+        "name": "Aashiqui 2",
+        "image": "images/albums/ab67616d00001e026404721c1943d5069f0805f3.jpeg",
+        "description": ["Mithoon", "Ankit Tiwari"],
+        "song": "songs/Ek Sanam Chahiye Aashiqui Ke Liye - Kumar Sanu.mp3"
+    },
+    {
+        "name": "Love Hotel",
+        "image": "images/albums/ab67616d00001e021e63de6489803c2b39e7f8e5.jpeg",
+        "description": ["leftovermax"],
+        "song": "songs/love hotel.mp3"
+    },
+    {
+        "name": "Making Memories",
+        "image": "images/albums/ab67616d00001e02bb25239324c4e16ae01fda36.jpeg",
+        "description": ["Karan Aujla", "Ikky"],
+        "song": "songs/Tauba Tauba (From _Bad Newz_) - Karan Aujla.mp3"
+    },
+    {
+        "name": "Jo Tum Mere Ho",
+        "image": "images/albums/ab67616d00001e0272a77d038887cdc425f5ee55.jpeg",
+        "description": ["Anuv Jain"],
+        "song": "songs/Tujhe Sochta Hoon - Pritam.mp3"
+    },
+    {
+        "name": "Aaj Ki Raat (from 'Stree 2')",
+        "image": "images/albums/ab67616d00001e025e16168f7e8ff4fb8aace6cf.jpeg",
+        "description": ["Sachin-Jigar", "Amitabh Bhatacharya"],
+        "song": "songs/Aaj Ki Raat (From _Stree 2_) - Sachin-Jigar.mp3"
+    },
+    {
+        "name": "Ye Jawaani Hai Deewani",
+        "image": "images/albums/ab67616d00001e02707ea5b8023ac77d31756ed4.jpeg",
+        "description": ["Pritam"],
+        "song": "songs/Badtameez Dil - Pritam.mp3"
+    },
+    {
+        "name": "Moosetape",
+        "image": "images/albums/ab67616d00001e021d1cc2e40d533d7bcebf5dae.jpeg",
+        "description": ["Sidhu Moose Wala"],
+        "song": "songs/Moosedrilla (feat. DIVINE) - Sidhu Moose Wala.mp3"
+    },
+    {
+        "name": "Still Rollin",
+        "image": "images/albums/ab67616d00001e021a8c4618eda885a406958dd0.jpeg",
+        "description": ["Shubh"],
+        "song": "songs/Moosedrilla (feat. DIVINE) - Sidhu Moose Wala.mp3"
+    },
+    {
+        "name": "Animal",
+        "image": "images/albums/ab67616d00001e025f3ede47954a93aa03efe5f9.jpeg",
+        "description": ["Manan Bhardwaj", "Vishal Mishra", "Jaani"],
+        "song": "songs/Arjan Vailly (From _ANIMAL_) - Manan Bhardwaj.mp3"
+    },
+    {
+        "name": "Rockstar",
+        "image": "images/albums/ab67616d00001e0254e544672baa16145d67612b.jpeg",
+        "description": ["A.R. Rahman"],
+        "song": "songs/love hotel.mp3"
+    },
+    {
+        "name": "Sajni (from Laaptaa Ladies)",
+        "image": "images/albums/ab67616d00001e02d5f4378b1ffc9119fdc7306d.jpeg",
+        "description": ["Ram Sampath", "Arijit Singh", "Prashant Pandey"],
+        "song": "songs/Apna Bana Le - Sachin-Jigar.mp3"
+    },
+    {
+        "name": "Ek Tha Raja",
+        "image": "images/albums/ab67616d00001e029bb2d30b01ac2cada8a8ad03.jpeg",
+        "description": ["Badshah"],
+        "song": "songs/God Damn - Badshah.mp3"
+    },
+    {
+        "name": "G.O.A.T",
+        "image": "images/albums/ab67616d00001e02e62ca3548e739bd85eebbbc9.jpeg",
+        "description": ["Diljit Dosanjh"],
+        "song": "songs/G.O.A.T..mp3"
+    },
+    {
+        "name": "Chuttamulle (from Devara Part 1)",
+        "image": "images/albums/ab67616d00001e026d97b3dc154dfdbe2321fb5c.jpeg",
+        "description": ["Shilpa Rao", "Anirudh Ravichander", "Rammajogayya Sastry"],
+        "song": "songs/Chuttamalle (From _Devara Part 1_) - Shilpa Rao.mp3"
+    },
+    {
+        "name": "Jab We Met",
+        "image": "images/albums/ab67616d00001e0252fe6875028c892308ffc2f7.jpeg",
+        "description": ["Various Artists"],
+        "song": "songs/Tum Se Hi - Pritam.mp3"
+    },
+    {
+        "name": "Best of Romance: Atif Aslam & Pritam",
+        "image": "images/albums/ab67616d00001e02a1c00de3e08bfde2c646c7a3.jpeg",
+        "description": ["Atif Aslam", "Pritam"],
+        "song": "songs/O Meri Laila - Atif Aslam.mp3"
+    },
+    {
+        "name": "Humari Adhuri Kahani (Original Motion Picture Sound Soundtrack)",
+        "image": "images/albums/ab67616d00001e02b0f9ceb59927ab76fe6269be.jpeg",
+        "description": ["Jeet Gannguli", "Mithoon", "Ami Mishra"],
+        "song": "songs/Hamari Adhuri Kahani (Title Track) - Jeet Gannguli.mp3"
+    },
+    {
+        "name": "Kabir Singh",
+        "image": "images/albums/ab67616d00001e02c5545f737b16ad5ee767b62a.jpeg",
+        "description": ["Sachet Parampara", "Vishal Mishra", "Mithoon"],
+        "song": "songs/Mere Sohneya (From _Kabir Singh_) - Sachet Tandon.mp3"
+    },
+    {
+        "name": "Desi Kalakaar",
+        "image": "images/albums/ab67616d00001e0265ce8c712e4fb894bc88461b.jpeg",
+        "description": ["Yo Yo Honey Singh", "Lil Golu"],
+        "song": "songs/Desi Kalakaar - Yo Yo Honey Singh.mp3"
+    }
+]

@@ -1,0 +1,170 @@
+#playlists-container {
+    height: 20rem;
+    margin: 1.5rem 0;
+    padding: 0px 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#playlists-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#playlists-container::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+#playlists-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+
+.playlist-item {
+    background-color: rgb(31, 31, 31);
+    margin: 10px 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.playlist-item h4 {
+    margin: 0.5rem 0;
+}
+
+.playlist-item p {
+    font-size: 0.9rem;
+}
+
+.playlist-item button {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+    border-radius: 3rem;
+    border: none;
+}
+
+.item-card {
+    height: 3rem;
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.item-card .thumbnail-container {
+    width: 48px;
+    height: 100%;
+    position: relative;
+}
+
+.item-card .thumbnail {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.item-card .play-button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-card .play-button::after {
+    font-family: FontAwesome;
+    content: '\f04b';
+    font-size: 1.2rem;
+}
+
+.item-card:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.item-card:hover .play-button {
+    z-index: 1;
+}
+
+.item-card:hover .thumbnail {
+    opacity: 0.5;
+}
+
+.item-card .item-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.item-card h4, p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Mobile Devices (Upto 480px) */
+@media screen and (max-width: 480px) {
+    #playlists-container {
+        height: 65%;
+    }
+
+    .item-card {
+        height: 4.5rem;
+    }
+
+    .item-card .thumbnail-container {
+        width: 4.5rem;
+    }
+
+    .item-card .play-button::after {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #playlists-container {
+        height: 75%;
+    }
+
+    .item-card {
+        height: 4.5rem;
+    }
+
+    .item-card .thumbnail-container {
+        width: 4.5rem;
+    }
+
+    .item-card .play-button::after {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large Tablets (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    #playlists-container .item-info {
+        width: 10rem;
+    }
+
+    .item-info h4, .item-info p {
+        font-size: 0.7rem;
+    }
+}
+
+/* Laptops/Desktops (1025px to 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    #playlists-container {
+        height: 55%;
+    }
+}
+
+/* Large Desktops (1441px and above) */
+@media screen and (min-width: 1441px) {
+    #playlists-container {
+        height: 45%;
+    }
+}

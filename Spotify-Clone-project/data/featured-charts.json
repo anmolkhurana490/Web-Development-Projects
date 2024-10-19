@@ -1,0 +1,38 @@
+[
+    {
+        "name": "",
+        "image": "images/featured-charts/top_songs_global.jpg",
+        "description": "Your weekly update of the most played tracks right now - Global.",
+        "song": "songs/G.O.A.T..mp3"
+    },
+    {
+        "name": "",
+        "image": "images/featured-charts/top_songs_usa.jpg",
+        "description": "Your weekly update of the most played tracks right now - USA.",
+        "song": "songs/love hotel.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/featured-charts/top_50_global.jpg",
+        "description": "Your daily update of the most played tracks right now - Global.",
+        "song": "songs/Arjan Vailly (From _ANIMAL_) - Manan Bhardwaj.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/featured-charts/top_50_usa.jpg",
+        "description": "Your daily update of the most played tracks right now - USA.",
+        "song": "songs/Dekha Ek Khwab - Lata Mangeshkar.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/featured-charts/viral_50_global.jpg",
+        "description": "Your daily update of the most viral tracks right now - Global.",
+        "song": "songs/Aaj Ki Raat (From _Stree 2_) - Sachin-Jigar.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/featured-charts/viral_50_usa.jpg",
+        "description": "Your daily update of the most viral tracks right now - USA.",
+        "song": "songs/God Damn - Badshah.mp3"
+    }
+]

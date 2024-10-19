@@ -1,0 +1,122 @@
+[
+    {
+        "name": "",
+        "image": "images/radio/arijit_singh.jpeg",
+        "description": "With Sachin-Jigar, Mithoon, Atif Aslam and more",
+        "song": "songs/Apna Bana Le - Sachin-Jigar.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/kk.jpeg",
+        "description": "With Pritam, Mohit Chauhan, Armaan Malik and more",
+        "song": "songs/Teri Yaadon Mein - KK.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/diljit_dosanjh.jpeg",
+        "description": "With Karan Aujla, Sidhu Moose Wala, AP Dhillon and more",
+        "song": "songs/G.O.A.T..mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/ar_rahman.jpeg",
+        "description": "With Harris Jayaraj, Anirudh Ravichander, Yuvan Shankar Raja and more",
+        "song": "songs/Tere Bina - A.R. Rahman.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/llaiyaraaja.jpeg",
+        "description": "With K. J. Yesudas, Swarnalatha, Uma Ramanan and more",
+        "song": "songs/G.O.A.T..mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/gv_prakash.jpeg",
+        "description": "With Santhosh Narayanan, Yuvan Shankar Raja, Anirudh Ravichander and more",
+        "song": "songs/Chuttamalle (From _Devara Part 1_) - Shilpa Rao.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/udit_narayan.jpeg",
+        "description": "With Uttam Singh, Abhijeet, Anuradha Paudwal and more",
+        "song": "songs/Tere Naam.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/atif_aslam.jpeg",
+        "description": "With Sachin-Jigar, KK, Sachet Tandon and more",
+        "song": "songs/O Meri Laila - Atif Aslam.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/shreya_ghoshal.jpeg",
+        "description": "With A.R. Rahman, Pritam, Vishal-Shekhar and more",
+        "song": "songs/Agar Tum Mil Jao - From _Zeher_ - Shreya Ghoshal.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/yo_yo_honey_singh.jpeg",
+        "description": "With Guru Randhawa, Badshah, Harrdy Sandhu and more",
+        "song": "songs/Millionaire - Yo Yo Honey Singh.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/kumar_sanu.jpeg",
+        "description": "With Abhijeet, Asha Bhosle, Jatin-Lalit and more",
+        "song": "songs/Ek Sanam Chahiye Aashiqui Ke Liye - Kumar Sanu.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/rahat_fateh_ali_khan.jpeg",
+        "description": "With Shankar-Ehsaan-Loy, Atif Aslam, Javed Ali and more",
+        "song": "songs/O Meri Laila - Atif Aslam.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/karan_aujla.jpeg",
+        "description": "With Diljit Dosanjh, Shubh, Sidhu Moose Wala and more",
+        "song": "songs/Tauba Tauba (From _Bad Newz_) - Karan Aujla.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/vijay_antony.jpeg",
+        "description": "ArtistWith G. V. Prakash, Silambarasan TR, Anirudh Ravichander and more",
+        "song": "songs/Chuttamalle (From _Devara Part 1_) - Shilpa Rao.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/lata_mangeskar.jpeg",
+        "description": "With Mohammed Rafi, Kishore Kumar, Mukesh and more",
+        "song": "songs/Dekha Ek Khwab - Lata Mangeshkar.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/sp_balasubrahmanyam.jpeg",
+        "description": "With A.R. Rahman, K. J. Yesudas, Swarnalatha and more",
+        "song": "songs/Tere Bina - A.R. Rahman.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/alka_yagnik.jpeg",
+        "description": "With Abhijeet, Jatin-Lalit, Vinod Rathod and more",
+        "song": "songs/Aapke Pyaar Mein Hum.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/ap_dhillon.jpeg",
+        "description": "With Shubh, Diljit Dosanjh, Karan Aujla and more",
+        "song": "songs/G.O.A.T..mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/deva.jpeg",
+        "description": "With Deva, Sabesh, Manikka Vinayagam and more",
+        "song": "songs/Teri Yaadon Mein - KK.mp3"
+    },
+    {
+        "name": "",
+        "image": "images/radio/ammy_virk.jpeg",
+        "description": "With Gurnam Bhullar, Ninja, Amrinder Gill and more",
+        "song": "songs/Tauba Tauba (From _Bad Newz_) - Karan Aujla.mp3"
+    }
+]
