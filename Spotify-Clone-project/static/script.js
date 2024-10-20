@@ -40,9 +40,13 @@ function add_content(data_path, element_selector) {
                     <name>${wrap_text(item.name, 35)}</name>
                     <p>${wrap_text(format_description(item.description), 35)}</p>
                 </div>
+                <button class="three-dots"></button>
             `;
 
-            block.addEventListener('click', () => update_music_player(block.dataset));
+            block.addEventListener('click', e => {
+                if (!e.target.classList.contains('three-dots'))
+                    update_music_player(block.dataset)
+            });
             element.append(block);
         });
     });
@@ -67,38 +71,6 @@ function add_default_spotify_content() {
     })
 }
 
-// to open link in new tab (for .openInNewTab button)
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('openInNewTab')) {
-        window.open(e.target.getAttribute('href'), target = '_blank');
-    }
-})
-
-// when section heading or show all is clicked, then show all contents
-document.addEventListener('click', e => {
-    if (e.target.matches('.section-header a') || e.target.matches('.section-header h2')) {
-        const section = e.target.closest('.content-section');
-        const section_title = section.querySelector('.section-header h2').innerText;
-        const content_list = section.querySelector('.content-container').children;
-
-        document.getElementById('spotify-content').innerHTML = `<h1>${section_title}</h1>`;
-        let allItemsDiv = document.createElement('div');
-        allItemsDiv.setAttribute('class', 'all-items');
-        if (section.getAttribute('id') == 'artists-section') allItemsDiv.setAttribute('id', 'artists-section');
-
-        Array.from(content_list).forEach((item) => {
-            allItemsDiv.append(item);
-        })
-        document.getElementById('spotify-content').append(allItemsDiv);
-        document.getElementById('spotify-content-container').scrollTop = 0;
-    }
-})
-
-// add default content when home button is clicked
-document.getElementById('home').addEventListener('click', add_default_spotify_content);
-
-// when page is reloaded
-add_default_spotify_content();
 
 // add empty library default content
 function default_empty_library() {
@@ -134,12 +106,16 @@ function updateLibrary() {
                             <h4>${item_data.name}</h4>
                             <p>${format_description(item_data.description)}</p>
                         </div>
+                        <button class="three-dots"></button>
                     `;
 
                 container.append(item_div);
                 return item_div;
             }).then((item_div) => {
-                item_div.addEventListener('click', () => update_music_player(item_div.dataset));
+                item_div.addEventListener('click', e => {
+                    if (!e.target.classList.contains('three-dots'))
+                        update_music_player(item_div.dataset)
+                });
             });
         });
     }
@@ -168,41 +144,10 @@ function createContextElement(e, menuMap, focusElement) {
     cmenu.style.left = `${e.clientX}px`;
 
     document.body.append(cmenu);
+    console.log(menuMap, focusElement);
     e.preventDefault();
 }
 
-// listening context menu event
-document.addEventListener('contextmenu', e => {
-    removeContextMenu();
-    let menuMap, focusElement;
-    const blockElement = e.target.closest('.block');
-    if (blockElement) {
-        menuMap = {
-            'add': {
-                'name': 'Add to your Library',
-                'function': addToLibrary
-            }
-        }
-        focusElement = blockElement;
-    }
-    const libraryElement = e.target.closest('.item-card');
-    if (libraryElement) {
-        menuMap = {
-            'remove': {
-                'name': 'Remove from your Library',
-                'function': removeFromLibrary
-            }
-        }
-        focusElement = libraryElement;
-    }
-    if (menuMap) createContextElement(e, menuMap, focusElement);
-})
-
-// removing context menu
-document.addEventListener('click', removeContextMenu);
-document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') removeContextMenu();
-});
 
 // add into library
 function addToLibrary(element) {
@@ -291,21 +236,11 @@ function update_music_player(data) {
         volumeBar.addEventListener('input', () => {
             audio.volume = volumeBar.value;
         });
+
+        play_pause_music();
     });
 }
 
-// initializing music player section
-if (localStorage.getItem('play-music')) {
-    let play_music_data = JSON.parse(localStorage.getItem('play-music'));
-    initialize_music_player();
-    update_music_player(play_music_data);
-    document.addEventListener('keydown', (e) => {
-        if (e.key == ' ' && !e.target.classList.contains('text-input')) {
-            play_pause_music();
-            e.preventDefault();
-        }
-    });
-}
 
 // functionalities like play, pause, mute, unmute, previous, next music
 function play_pause_music() {
@@ -324,9 +259,9 @@ function previous_music() {
     let music_data = JSON.parse(localStorage.getItem('play-music'));
     let idx = Number(music_data.id);
     load_data(music_data.path).then(data => {
-        let prev = data[idx-1];
-        if(prev){
-            update_music_player({path: music_data.path, id: idx-1});
+        let prev = data[idx - 1];
+        if (prev) {
+            update_music_player({ path: music_data.path, id: idx - 1 });
         }
         else console.log('not found');
     })
@@ -336,9 +271,9 @@ function next_music() {
     let music_data = JSON.parse(localStorage.getItem('play-music'));
     let idx = Number(music_data.id);
     load_data(music_data.path).then(data => {
-        let next = data[idx+1];
-        if(next){
-            update_music_player({path: music_data.path, id: idx+1});
+        let next = data[idx + 1];
+        if (next) {
+            update_music_player({ path: music_data.path, id: idx + 1 });
         }
         else console.log('not found');
     })
@@ -374,32 +309,128 @@ function repeat_music() {
 }
 
 
-// for viewing different sections mobile view (small screen) with help of menu bar
-document.getElementById('nav-menu-icon').addEventListener('click', () => {
-    document.getElementById('nav-menu-icon').classList.toggle('show-menu');
-})
-
-function close_all_sections(){
+function close_all_sections() {
     document.getElementById('library').style.display = 'none';
     document.getElementById('spotify-content-container').style.display = 'none';
-    if(document.getElementById('music-player-section'))
+    if (document.getElementById('music-player-section'))
         document.getElementById('music-player-section').style.display = 'none';
 }
 
-function load_library(){
+function load_library() {
     close_all_sections();
     document.getElementById('library').style.display = 'block';
 }
 
-function load_home(){
+function load_home() {
     close_all_sections();
     document.getElementById('spotify-content-container').style.display = 'block';
     add_default_spotify_content();
 }
 
-function load_music_player(){
+function load_music_player() {
     close_all_sections();
-    if(document.getElementById('music-player-section'))
+    if (document.getElementById('music-player-section'))
         document.getElementById('music-player-section').style.display = 'flex';
     else document.getElementById('spotify-content-container').style.display = 'block';
 }
+
+function main() {
+    // to open link in new tab (for .openInNewTab button)
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('openInNewTab')) {
+            window.open(e.target.getAttribute('href'), target = '_blank');
+        }
+    })
+
+    // when section heading or show all is clicked, then show all contents
+    document.addEventListener('click', e => {
+        if (e.target.matches('.section-header a') || e.target.matches('.section-header h2')) {
+            const section = e.target.closest('.content-section');
+            const section_title = section.querySelector('.section-header h2').innerText;
+            const content_list = section.querySelector('.content-container').children;
+
+            document.getElementById('spotify-content').innerHTML = `<h1>${section_title}</h1>`;
+            let allItemsDiv = document.createElement('div');
+            allItemsDiv.setAttribute('class', 'all-items');
+            if (section.getAttribute('id') == 'artists-section') allItemsDiv.setAttribute('id', 'artists-section');
+
+            Array.from(content_list).forEach((item) => {
+                allItemsDiv.append(item);
+            })
+            document.getElementById('spotify-content').append(allItemsDiv);
+            document.getElementById('spotify-content-container').scrollTop = 0;
+        }
+    })
+
+    // add default content when home button is clicked
+    document.getElementById('home').addEventListener('click', add_default_spotify_content);
+
+    // when page is reloaded
+    add_default_spotify_content();
+
+    // listening context menu event
+    document.addEventListener('contextmenu', e => {
+        removeContextMenu();
+        let menuMap, focusElement;
+        const blockElement = e.target.closest('.block');
+        if (blockElement) {
+            menuMap = {
+                'add': {
+                    'name': 'Add to your Library',
+                    'function': addToLibrary
+                }
+            }
+            focusElement = blockElement;
+        }
+        const libraryElement = e.target.closest('.item-card');
+        if (libraryElement) {
+            menuMap = {
+                'remove': {
+                    'name': 'Remove from your Library',
+                    'function': removeFromLibrary
+                }
+            }
+            focusElement = libraryElement;
+        }
+        if (menuMap) createContextElement(e, menuMap, focusElement);
+    })
+
+    // removing context menu
+    document.addEventListener('click', e => {
+        removeContextMenu();
+        let event = new MouseEvent('contextmenu', {
+            bubbles: true,
+            cancelable: true,
+            clientX: e.clientX,
+            clientY: e.clientY
+        });
+        if (e.target.classList.contains('three-dots')) {
+            e.target.dispatchEvent(event);
+        }
+    })
+
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') removeContextMenu();
+    });
+
+    // initializing music player section
+    if (localStorage.getItem('play-music')) {
+        let play_music_data = JSON.parse(localStorage.getItem('play-music'));
+        initialize_music_player();
+        update_music_player(play_music_data);
+        document.addEventListener('keydown', (e) => {
+            if (e.key == ' ' && !e.target.classList.contains('text-input')) {
+                play_pause_music();
+                e.preventDefault();
+            }
+        });
+    }
+
+    // for viewing different sections mobile view (small screen) with help of menu bar
+    document.getElementById('nav-menu-icon').addEventListener('click', () => {
+        document.getElementById('nav-menu-icon').classList.toggle('show-menu');
+    })
+}
+
+main();

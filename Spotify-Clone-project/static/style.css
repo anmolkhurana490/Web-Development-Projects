@@ -328,6 +328,27 @@ main {
     cursor: pointer;
 }
 
+.three-dots {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 100%;
+    border: none;
+    background-color: rgb(21, 21, 21);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.three-dots::before {
+    font-family: FontAwesome;
+    content: '\f142';
+}
+
+.three-dots:hover {
+    background-color: rgb(41, 41, 41);
+}
+
 /* Mobile Devices (Upto 480px) */
 @media screen and (max-width: 480px) {
     header {
