@@ -53,6 +53,7 @@
     background-size: cover;
     border-radius: 5px;
     padding: 0.5rem;
+    position: relative;
 }
 
 .block:hover {
