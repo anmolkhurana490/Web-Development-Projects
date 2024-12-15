@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="src/images/x_icon_bigger.jpg">
+    <title>Home / X</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="src/script.js"></script>
+</head>
+
+<body class="bg-black text-white flex justify-evenly h-screen relative">
+    <nav
+        class="large flex flex-col bg-black max-[640px]:hidden max-[640px]:justify-between  gap-2 items-center lg:items-end lg:w-96 sm:h-full px-2 md:px-4 py-2">
+        <a href="https://x.com/" class="logo"></a>
+
+        <ul class="menu-list flex flex-col lg:w-60 [&>li]:menu-option">
+            <li class="before:content-['\f015']" id="home">
+                <p>Home</p>
+            </li>
+            <li class="before:content-['\f002']" id="explore">
+                <p>Explore</p>
+            </li>
+            <li class="before:content-['\f0f3']" id="notifications">
+                <p>Notifications</p>
+            </li>
+            <li class="before:content-['\f0e0']" id="messages">
+                <p>Messages</p>
+            </li>
+            <li class="before:content-['\e4f6']" id="grok">
+                <p>Grok</p>
+            </li>
+            <li class="before:content-['\f500']" id="communities">
+                <p>Communities</p>
+            </li>
+            <li class="before:content-['\e61b']" id="premium">
+                <p>Premium</p>
+            </li>
+            <li class="before:content-['\f0e7']" id="verified-orgs">
+                <p>Verified Orgs</p>
+            </li>
+            <li class="before:content-['\f007']" id="profile">
+                <p>Profile</p>
+            </li>
+            <li class="before:content-['\f141']" id="more">
+                <p>More</p>
+            </li>
+        </ul>
+
+        <a href="/post" class="new-tweet-btn post-btn">
+            <div class="icon-big before:content-['\2b'] lg:hidden"></div>
+            <p class="lg:inline">Post</p>
+        </a>
+
+        <button id="current-profile"
+            class="highlight-hover-round flex items-center flex-wrap gap-2 px-2 py-1 sm:absolute bottom-4 max-[640px]:my-2">
+            <div class="profile-picture bg-[url('/src/images/default_profile_200x200.png')]"></div>
+            <div class="details text-left px-1 max-[640px]:block max-[986px]:hidden">
+                <p class="name font-bold">Anmol Khurana</p>
+                <p class="x-id text-white/70">@AnmolKh01474093</p>
+            </div>
+        </button>
+    </nav>
+
+    <main
+        class="x-main-content border-x border-gray-500 w-full sm:w-full xl:max-w-[40rem] h-full overflow-y-scroll custom-scrollbar">
+        <nav class="small-top flex justify-between items-center px-4 py-2 sm:hidden">
+            <button id="current-profile" class="highlight-hover-round flex items-center gap-2 px-2 py-1">
+                <div class="profile-picture bg-[url('/src/images/default_profile_200x200.png')]"></div>
+            </button>
+            <a href="https://x.com/" class="logo"></a>
+            <a href="" class="upgrade highlight-hover-round border border-white font-bold px-2 py-1">Upgrade</a>
+        </nav>
+
+        <div id="top-options-container" class="bottom-line flex bg-black/95 sticky top-[-1px]">
+            <div class="for-you-option w-1/2 text-center p-3 hover:bg-gray-500/30 font-bold">
+                For You
+                <div class="under-line border-2 border-blue-500 w-16 rounded-full mx-auto"></div>
+            </div>
+            <div class="following-option w-1/2 text-center p-3 hover:bg-gray-500/30">
+                Following
+                <div class="under-line border-2 border-blue-500 w-16 rounded-full mx-auto hidden"></div>
+            </div>
+        </div>
+
+        <div id="postbox" class="postbox bottom-line px-6 gap-3 hidden sm:flex">
+            <div class="profile-picture bg-[url('/src/images/default_profile_200x200.png')] my-4"></div>
+            <div id="input-post-container" class="[&>*]:my-2 w-full">
+                <textarea name="post-text" class="w-full bg-black text-white text-2xl py-3 my-1"
+                    placeholder="What is Happening?!"></textarea>
+                <button id="who-can-reply"
+                    class="before:content-['\f57d'] before:mr-1 text-blue-500 font-semibold">Everyone can
+                    reply</button>
+                <div class="border-t border-gray-500 w-full"></div>
+                <div class="btns flex justify-between items-center">
+                    <div id="postbox-options-container" class=" text-blue-500">
+                        <button id="media" class="before:content-['\f03e']"></button>
+                        <button id="gif" class="before:content-['\f06b']"></button>
+                        <button id="poll" class="before:content-['\f828']"></button>
+                        <button id="emoji" class="before:content-['\f118']"></button>
+                        <button id="schedule" class="before:content-['\f133']"></button>
+                        <button id="location" class="before:content-['\f3c5']"></button>
+                    </div>
+                    <button id="post-btn" class="post-btn bg-blue-500 text-lg font-semibold px-5 py-1 rounded-full">Post</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="posts-for-you-container" class="posts-container">
+            <a href="" id="show-posts-btn"
+                class="low-highlight-hover text-blue-500 text-center w-full block py-3 bottom-line">Show 70
+                Posts</a>
+        </div>
+        <div id="posts-following-container" class="posts-container hidden">
+            <a href="" id="show-posts-btn"
+                class="low-highlight-hover text-blue-500 text-center w-full block py-3 bottom-line">Show 20
+                Posts</a>
+        </div>
+
+        <a href="/post" class="new-tweet-btn post-btn fixed right-5 bottom-16 sm:hidden">
+            <div class="icon-big before:content-['\2b'] lg:hidden"></div>
+        </a>
+
+        <nav class="small-bottom bg-black flex justify-around items-center w-full px-4 py-2 fixed sm:hidden bottom-0">
+            <a href="" if="home" class="icon-big before:content-['\f015']"></a>
+            <a href="" if="explore" class="icon-big before:content-['\f002']"></a>
+            <a href="" if="grok" class="icon-big before:content-['\e4f6']"></a>
+            <a href="" if="notifications" class="icon-big before:content-['\f0f3']"></a>
+            <a href="" if="messages" class="icon-big before:content-['\f0e0']"></a>
+            <a href="" if="communities" class="icon-big before:content-['\f500']"></a>
+        </nav>
+
+        <div id="postbox-popup" class="postbox px-6 gap-2 hidden flex-col absolute z-10 bg-black min-[680px]:rounded-2xl">
+            <div class="top-part h-14 flex justify-between items-center">
+                <button id="close-btn"
+                    class="icon-small before:content-['x'] highlight-hover-round px-2 py-0.5"></button>
+                <button id="drafts-btn"
+                    class="text-blue-500 font-bold highlight-hover-round px-2 py-0.5">Drafts</button>
+            </div>
+
+            <div id="input-post-container" class="w-full">
+                <div class="flex gap-3">
+                    <div class="profile-picture bg-[url('/src/images/default_profile_200x200.png')] my-4"></div>
+                    <textarea name="post-text" rows="3" class="w-full bg-black text-white sm:text-2xl py-3 my-1"
+                        placeholder="What is Happening?!"></textarea>
+                </div>
+
+                <button id="who-can-reply"
+                    class="before:content-['\f57d'] before:mr-1 text-blue-500 font-semibold">Everyone
+                    can reply</button>
+            </div>
+
+            <div class="border-t border-gray-500 w-full"></div>
+
+            <div class="btns flex justify-between items-center pb-2">
+                <div id="postbox-options-container" class=" text-blue-500">
+                    <button id="media" class="before:content-['\f03e']"></button>
+                    <button id="gif" class="before:content-['\f06b']"></button>
+                    <button id="poll" class="before:content-['\f828']"></button>
+                    <button id="emoji" class="before:content-['\f118']"></button>
+                    <button id="schedule" class="before:content-['\f133']"></button>
+                    <button id="location" class="before:content-['\f3c5']"></button>
+                </div>
+                <button id="post-btn" class="post-btn bg-blue-500 text-lg font-semibold px-5 py-1 rounded-full">Post</button>
+            </div>
+        </div>
+
+        <div class="over-body hidden"></div>
+    </main>
+
+    <additional
+        class="max-[986px]:hidden min-[986px]:w-96 lg:w-[30rem] px-8 py-1 flex flex-col gap-4 h-full mb-4 overflow-y-scroll custom-scrollbar">
+        <div id="search-box" class="sticky top-0 bg-black/95 py-1">
+            <input type="text"
+                class="search-bar icon-big w-full bg-gray-800 px-8 py-2 rounded-full before:content-['\f002']"
+                placeholder="Search">
+        </div>
+
+        <div id="subscribe" class="border border-gray-500 px-4 py-2 rounded-2xl flex flex-col gap-2">
+            <h3 class="text-lg font-bold">Subscribe to Premium</h3>
+            <p class="">Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
+            <a href="" id="subscribe-btn" class="bg-blue-500 w-fit px-4 py-2 font-bold rounded-full">Subscribe</a>
+        </div>
+
+        <div id="live-on-X" class="additional-bordered-boxes">
+            <h3 class="text-lg font-bold">Live on X</h3>
+            <div class="hosting-item low-highlight-hover">
+                <div class="title flex text-sm">
+                    <div class="item-profile-photo bg-[url('/src/images/narendra_modi.jpg')]"></div>
+                    <h3 class="name mx-1 font-bold">Narendra Modi</h3> is hosting
+                </div>
+                <div class="content flex text-[0.95rem]">
+                    <p class="font-semibold">Delighted to be among the dynamic people of Mumbai! ...</p>
+                    <div class="views-container">
+                        <div class="item-profile-photo bg-[url('/src/images/narendra_modi.jpg')]"></div>
+                        <p>+79.1K</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hosting-item low-highlight-hover">
+                <div class="title flex text-sm">
+                    <div class="item-profile-photo bg-[url('/src/images/narendra_modi.jpg')]"></div>
+                    <h3 class="name mx-1 font-bold">Narendra Modi</h3> is hosting
+                </div>
+                <div class="content flex text-[0.95rem]">
+                    <p class="font-semibold">Delighted to be among the dynamic people of Mumbai! ...</p>
+                    <div class="views-container">
+                        <div class="item-profile-photo bg-[url('/src/images/narendra_modi.jpg')]"></div>
+                        <p>+79.1K</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="whats-happening" class="additional-bordered-boxes">
+            <h3 class="text-lg font-bold">What's Happening</h3>
+            <div class="trending-item low-highlight-hover flex justify-between">
+                <div class="content flex flex-col">
+                    <h3 class="name small-gray">Technology • Trending in India</h3>
+                    <p class="font-bold">Python</p>
+                    <p class="small-gray">17K posts</p>
+                </div>
+                <div class="three-dots highlight-hover-round px-2 py-0.5 h-fit"></div>
+            </div>
+
+            <div class="trending-item low-highlight-hover flex justify-between">
+                <div class="content flex flex-col">
+                    <h3 class="name small-gray">Entertainnment • Trending in India</h3>
+                    <p class="font-bold">#KanguvaBlockbuster</p>
+                    <p class="small-gray">30.8K posts</p>
+                </div>
+                <div class="three-dots highlight-hover-round px-2 py-0.5 h-fit"></div>
+            </div>
+            <a href="#" class="show-more low-highlight-hover text-blue-500">Show More</a>
+        </div>
+
+        <div id="who-to-follow" class="additional-bordered-boxes">
+            <h3 class="text-lg font-bold">Who To Follow</h3>
+            <div class="follow-item low-highlight-hover flex justify-between items-center">
+                <div class="profile-picture bg-[url('/src/images/openAI_400x400.jpg')]"></div>
+                <div class="profile-details w-7/12">
+                    <h3 class="name mx-1 font-bold">OpenAI</h3>
+                    <p class="x-id">@OpenAI</p>
+                </div>
+                <a class="follow-btn">Follow</a>
+            </div>
+            <div class="follow-item low-highlight-hover flex justify-between items-center">
+                <div class="profile-picture bg-[url('/src/images/openAI_400x400.jpg')]"></div>
+                <div class="profile-details w-7/12">
+                    <h3 class="name mx-1 font-bold">OpenAI</h3>
+                    <p class="x-id">@OpenAI</p>
+                </div>
+                <a class="follow-btn">Follow</a>
+            </div>
+            <a href="#" class="show-more low-highlight-hover text-blue-500">Show More</a>
+        </div>
+
+        <footer class="small-gray mb-12 [&>*]:mx-1">
+            <a href="">Terms of Service</a>
+            <a href="">Privacy Policy</a>
+            <a href="">Cookie Policy</a>
+            <a href="">Accessibility</a>
+            <a href="">Ads info</a>
+            <a href="">More</a>
+            <span>© 2024 X Corp</span>
+        </footer>
+    </additional>
+</body>
+
+</html>
