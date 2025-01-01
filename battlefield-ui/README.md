@@ -12,7 +12,7 @@ A web app to manage and update server settings, player stats, and game rules.
 2. Configure MongoDB:
 
 - Go to the backend folder.
-- Create a .env file and add your MongoDB connection string:
+- Update .env file with your MongoDB connection string:
 
 3. Start the Backend: Run the backend server:
 ```
