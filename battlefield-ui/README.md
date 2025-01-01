@@ -1,8 +1,32 @@
-# React + Vite
+# Battlefield Server Info App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web app to manage and update server settings, player stats, and game rules.
 
-Currently, two official plugins are available:
+## Setup Instructions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Install Dependencies**:
+   Open the terminal in the project directory and run:
+   ```bash
+   npm install
+   
+2. Configure MongoDB:
+
+- Go to the backend folder.
+- Create a .env file and add your MongoDB connection string:
+
+3. Start the Backend: Run the backend server:
+```
+node backend/server.js
+```
+
+4. Start the Frontend: Start the React app:
+```
+npm run dev
+```
+
+5. Access the App: Open the link shown in the terminal (default: http://localhost:5173).
+
+# Project Overview
+Backend: Node.js, Express, and MongoDB.
+Frontend: React.js.
+Features: Manage server settings and game rules with a responsive UI.
