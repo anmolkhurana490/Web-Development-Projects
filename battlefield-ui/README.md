@@ -27,6 +27,6 @@ npm run dev
 5. Access the App: Open the link shown in the terminal (default: http://localhost:5173).
 
 # Project Overview
-Backend: Node.js, Express, and MongoDB.
-Frontend: React.js.
-Features: Manage server settings and game rules with a responsive UI.
+- Backend: Node.js, Express, and MongoDB.
+- Frontend: React.js.
+- Features: Manage server settings and game rules with a responsive UI.
