@@ -4,6 +4,7 @@ import express from "express"
 import cors from "cors"
 import ServerInfo from "./ServerInfoSchema.js"
 import bodyParser from "body-parser"
+import defaultData from "./playerDataDefault.js"
 
 const app = express()
 const port = 8080
@@ -13,28 +14,38 @@ app.use(bodyParser.json())
 dotenv.config({ path: './backend/.env' })
 
 const conn = mongoose.connect(process.env.DB_URI, {
-    serverSelectionTimeoutMS: 30000, // 30 seconds
-    socketTimeoutMS: 45000, // 45 seconds
+  serverSelectionTimeoutMS: 30000, // 30 seconds
+  socketTimeoutMS: 45000, // 45 seconds
 }).then(() => console.log('MongoDB connected...'))
-    .catch(err => console.log(err));
+  .catch(err => console.log(err));
+
+const initializeDB = async () => {
+  let dbExists = await ServerInfo.exists()
+  if(dbExists == null){
+    ServerInfo.create(defaultData)
+  }
+}
 
 app.get('/serverInfo', async (req, res) => {
-    let data = await ServerInfo.findOne({})
-    res.json(data)
+  await initializeDB()
+  let data = await ServerInfo.findOne({})
+  res.json(data)
 })
 
 app.put('/serverInfo', async (req, res) => {
-    try {
-        let update = {}
-        update[req.body.attribute] = req.body.value
-        await ServerInfo.findOneAndUpdate({}, update)
-        res.status(200).send('Update successful');
-    } catch {(e => {
-        console.log('error while updating data: '+ e)
-        res.status(500).json({ error: 'Internal Server Error' });
-    })}
+  try {
+    let update = {}
+    update[req.body.attribute] = req.body.value
+    await ServerInfo.findOneAndUpdate({}, update)
+    res.status(200).send('Update successful');
+  } catch {
+    (e => {
+      console.log('error while updating data: ' + e)
+      res.status(500).json({ error: 'Internal Server Error' });
+    })
+  }
 })
 
 app.listen(port, () => {
-    console.log(`App is running at port ${port}`)
+  console.log(`App is running at port ${port}`)
 })
