@@ -8,12 +8,17 @@ function App() {
   const cols = 20
   const block_size = 30
   const drop_length = 5
+  const droppingTime = 150 // how fast the drops falls per block
+  const colorChangeTime = 2000 // how fast the color changes
 
   const [grid, setGrid] = useState(Array.from({ length: rows }, () => Array(cols).fill({ drop: false, color: [0, 0, 0] })))
 
   const currColor = useRef([0, 0, 0])
   const lastEmptyFullRow = useRef(Array(cols).fill(rows - 1))
   const currColorDiff = useRef(Array(cols).fill([0, 0, 0]))
+
+  const [day, setDay] = useState(true)
+  const [raining, setRaining] = useState(false)
 
   const randomColor = () => {
     let val1 = Math.floor(Math.random() * 255)
@@ -30,7 +35,7 @@ function App() {
   }
 
   const assignDrop = () => {
-    if (Math.random() > 0.7)
+    if (Math.random() > 0.9)
       return { color: currColor.current, drop: true }
     else return { color: [0, 0, 0], drop: false }
   }
@@ -67,7 +72,7 @@ function App() {
   }
 
   useEffect(() => {
-    const colorInterval = setInterval(() => currColor.current = randomColor(), 2000)
+    const colorInterval = setInterval(() => currColor.current = randomColor(), colorChangeTime)
 
     return () => {
       clearInterval(colorInterval)
@@ -78,10 +83,13 @@ function App() {
 
   const start = () => {
     clearInterval(gridInterval)
-    setGridInterval(setInterval(updateGrid, 200))
+    setGridInterval(setInterval(updateGrid, droppingTime))
+    setRaining(true)
   }
   const stop = () => {
     clearInterval(gridInterval)
+    setDay(!day)
+    setRaining(false)
   }
 
   return (
@@ -95,6 +103,11 @@ function App() {
         <div className="ring"></div>
         <div className="star"></div>
         <div className="grid"></div>
+
+        <div className={'sky ' + (day? 'day': '')} style={{ background: raining ? 'transparent' : ''}}>
+          {!raining && <div className="sun"></div>}
+          {!raining && <div className="moon"></div>}
+        </div>
       </div>
 
       <div className='container' style={{

@@ -287,3 +287,58 @@ body {
   0% { transform: scale(1); opacity: 1; }
   100% { transform: scale(1.5); opacity: 0; }
 }
+
+/* Sky Background */
+.sky {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Day Sky */
+.sky.day {
+  background: linear-gradient(135deg, #e5f5b4, #fff53f);
+}
+
+/* Night Sky */
+.sky.night {
+  /* background: linear-gradient(to bottom, #2c3e50, #34495e); */
+} 
+
+
+/* Sun Styling */
+.sky .sun {
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffdf00, #ff9500);
+  box-shadow: 0 0 70px rgba(255, 223, 0, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -25%;
+  left: 15%;
+  transition: bottom 2s ease-in-out;
+}
+
+/* Moon Styling */
+.sky .moon {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ffffff, #cccccc);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 15%;
+  transition: top 2s ease-in-out;
+}
+
+/* Show Sun */
+.sky.day .sun {
+  bottom: 75%;
+}
+
+/* Show Moon */
+.sky.day .moon {
+  top: -25%;
+}
