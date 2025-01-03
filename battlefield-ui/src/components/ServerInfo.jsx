@@ -80,7 +80,7 @@ const ServerInfo = ({ playerData, setPlayerData }) => {
                         <h2 className="text-xl font-semibold mb-4 uppercase">Map Rotation</h2>
                         <div className="flex flex-col items-center sm:grid 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-x-4 gap-y-8 mr-2">
                             {Array(10).fill().map((_, index) => {
-                                return <MapGridComponent key={index} map={{ image: "./src/assets/dawnbreaker-1.png", title: "Conquest Large Dawnbreaker" }} />
+                                return <MapGridComponent key={index} map={{ image: "dawnbreaker-1.png", title: "Conquest Large Dawnbreaker" }} />
                             })}
                         </div>
                     </div>
